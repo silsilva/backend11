@@ -1,13 +1,32 @@
 {
   "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
     "target": "ESnext",
-    "module": "CommonJS",
+    "module": "esnext",
     "moduleResolution": "node",
     "types": ["node", "cors"],
     "outDir": "./dist",
-    "rootDir": "./server",
+    "rootDir": "./pages",
     "esModuleInterop": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "jsx": "preserve",
+    "forceConsistentCasingInFileNames": true
   },
-  "include": ["./be-src/**/*.ts", "src/**/*", "images.d.ts", "server/**/*"]
+  "include": [
+    "./be-src/**/*.ts",
+    "src/**/*",
+    "images.d.ts",
+    "pages/**/*",
+    "next-env.d.ts",
+    "express-ext.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": ["node_modules"]
 }
